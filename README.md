@@ -1,8 +1,8 @@
 # 🎬 8K YT Downloader
 
-A simple YouTube video and audio downloader for Windows.
+A simple YouTube video and audio downloader for **Windows and macOS**.
 
-Download videos in up to **8K quality**, extract audio, choose different formats, and download playlists through a clean terminal interface.
+Download videos in up to **8K quality**, extract audio, choose different formats, download playlists, and use clipboard URLs through a clean terminal interface.
 
 ---
 
@@ -24,51 +24,41 @@ Download videos in up to **8K quality**, extract audio, choose different formats
 
 ---
 
-## 📦 Release Files
+# 📦 Release Files
 
-Each release contains two versions:
+Each release contains:
 
 ### 🟢 `8K-YT-Downloader.exe`
 
 The **ready-to-use Windows version**.
 
-No Python installation is required. Simply download the EXE and run it.
+Python and yt-dlp do **not** need to be installed separately.
 
 ### 🐍 `8K_YT_Downloader.py`
 
-The **Python source code** for the downloader.
+The **Python source code**.
 
-The source code is included so users can inspect the program and see exactly how it works.
+This can be run on Windows or macOS if the required dependencies are installed.
 
----
-
-## 💻 Requirements
-
-### For the `.exe`
-
-You need:
-
-* 🪟 Windows
-* 🌐 An internet connection
-* ⚙️ FFmpeg
-
-**Python and yt-dlp are NOT required.**
-
-### For the `.py` source
-
-You need:
-
-* 🐍 Python
-* 🌐 An internet connection
-* ⚙️ FFmpeg
-* `yt-dlp`
-* `Rich`
-* `PyFiglet`
-* `Pyperclip`
+The source code is included so users can inspect how the program works.
 
 ---
 
-## 📥 Using the EXE
+# 🪟 Windows
+
+## 💻 Using the EXE
+
+The easiest way to use 8K YT Downloader on Windows is the `.exe`.
+
+### Requirements
+
+* Windows 10 or newer
+* 🌐 Internet connection
+* ⚙️ FFmpeg
+
+**Python and yt-dlp are NOT required for the EXE.**
+
+### Installation
 
 No installation is required.
 
@@ -84,33 +74,33 @@ No installation is required.
 
 4. The downloader will open in a Command Prompt window.
 
-That's it! 🎉
+🎉 That's it!
 
 ---
 
-## ⚙️ Installing FFmpeg
+# ⚙️ Installing FFmpeg on Windows
 
-FFmpeg is required by 8K YT Downloader for combining video and audio streams and converting media formats.
+FFmpeg is required for combining video and audio streams and converting media formats.
 
 ### 1. Download FFmpeg
 
-Download a Windows build of FFmpeg from:
+Download a Windows build from:
 
-**https://www.gyan.dev/ffmpeg/builds/**
+[FFmpeg Builds by Gyan.dev](https://www.gyan.dev/ffmpeg/builds/?utm_source=chatgpt.com)
 
 For most users, download the **ffmpeg-release-essentials** ZIP.
 
 ### 2. Extract FFmpeg
 
-Extract the downloaded ZIP file.
+Extract the downloaded ZIP.
 
-You can place the extracted folder somewhere simple, such as:
+A simple location is:
 
 ```text
 C:\ffmpeg
 ```
 
-Make sure the following files exist:
+Make sure these files exist:
 
 ```text
 C:\ffmpeg\bin\ffmpeg.exe
@@ -135,7 +125,7 @@ and press **Enter**.
 
 Then:
 
-1. Open the **Advanced** tab.
+1. Open **Advanced**.
 2. Click **Environment Variables**.
 3. Under **System variables**, select **Path**.
 4. Click **Edit**.
@@ -146,13 +136,11 @@ Then:
 C:\ffmpeg\bin
 ```
 
-7. Click **OK** on all the windows.
+7. Click **OK** on all windows.
 
 ### 4. Check FFmpeg
 
-Close any existing Command Prompt windows and open a new one.
-
-Run:
+Open a **new** Command Prompt window and run:
 
 ```text
 ffmpeg -version
@@ -160,11 +148,74 @@ ffmpeg -version
 
 If FFmpeg displays its version information, it is installed correctly. ✅
 
-You can now use **8K YT Downloader**.
+---
+
+# 🍎 macOS
+
+The Windows `.exe` **will not work on macOS**.
+
+However, the included Python version can be run on macOS.
+
+## 🍺 Install using Homebrew
+
+If you don't already have Homebrew installed, install it from:
+
+[Homebrew](https://brew.sh/?utm_source=chatgpt.com)
+
+Then open **Terminal** and install Python and FFmpeg:
+
+```bash
+brew install python ffmpeg
+```
+
+Install the Python dependencies:
+
+```bash
+python3 -m pip install yt-dlp rich pyfiglet pyperclip
+```
+
+Navigate to the folder containing:
+
+```text
+8K_YT_Downloader.py
+```
+by typing: cd Downloads (replace Downloads with where you put the .py file)
+
+Then run:
+
+```bash
+python3 8K_YT_Downloader.py
+```
+
+🎉 The Python version should now run on macOS.
 
 ---
 
-## ⚡ Quick & Easy Download
+# 🐍 Running the Python Version on Windows
+
+You can also run the source code directly on Windows.
+
+### Requirements
+
+* Python
+* FFmpeg
+* Internet connection
+
+Install the required Python packages:
+
+```bat
+py -m pip install yt-dlp rich pyfiglet pyperclip
+```
+
+Then run:
+
+```bat
+py 8K_YT_Downloader.py
+```
+
+---
+
+# ⚡ Quick & Easy Download
 
 Choose:
 
@@ -180,7 +231,7 @@ You can also leave the URL empty if the YouTube link is already copied to your c
 
 ---
 
-## 🛠️ Advanced Download
+# 🛠️ Advanced Download
 
 Choose:
 
@@ -190,7 +241,7 @@ Choose:
 
 Advanced mode lets you choose exactly what you want to download.
 
-### Download Type
+## Download Type
 
 ```text
 1) Audio
@@ -200,7 +251,7 @@ Advanced mode lets you choose exactly what you want to download.
 
 ---
 
-## 🎥 Video Quality
+# 🎥 Video Quality
 
 Available quality options:
 
@@ -220,7 +271,7 @@ Available quality options:
 
 ---
 
-## 🎞️ Video Formats
+# 🎞️ Video Formats
 
 Supported video formats:
 
@@ -232,13 +283,13 @@ Supported video formats:
 
 ### Recommended
 
-**MP4** is the best choice for general compatibility.
+**MP4** is recommended for general compatibility.
 
-**MKV** can be useful when working with different video/audio streams.
+**MKV** can be useful when working with different video and audio streams.
 
 ---
 
-## 🎵 Audio Formats
+# 🎵 Audio Formats
 
 Supported audio formats:
 
@@ -250,7 +301,7 @@ Supported audio formats:
 
 ---
 
-## 📊 Download Progress
+# 📊 Download Progress
 
 The downloader displays live progress while downloading:
 
@@ -268,53 +319,47 @@ For playlists, the current video position is also displayed.
 
 ---
 
-## 📚 Playlists
+# 📚 Playlists
 
 You can download YouTube playlists.
 
-The downloader processes the videos individually and shows the progress of the current video.
+The downloader processes the videos individually and displays the progress of the current video.
 
 ---
 
-## 📁 Download Location
+# 📁 Download Location
 
-Downloads are automatically saved to your Windows **Downloads** folder.
+Downloads are automatically saved to your system's **Downloads** folder.
 
-For example:
+On Windows, this is normally:
 
 ```text
 C:\Users\YourName\Downloads
 ```
 
+On macOS, this is normally:
+
+```text
+/Users/YourName/Downloads
+```
+
 ---
 
-## 🔒 Is It a Virus?
+# 🔒 Is It a Virus?
 
 **8K YT Downloader is not intended to contain malware, viruses, spyware, or other malicious software.**
 
-The `.exe` is created from the included Python source code using **PyInstaller**.
+The Windows `.exe` is created from the included Python source code using **PyInstaller**.
 
 Because the EXE is a newly built and unsigned Windows executable, some antivirus software or Windows Defender may occasionally display a warning. This can happen with PyInstaller applications, particularly when they are new or have few downloads.
 
-The **Python source code is included with every release** so users can inspect the code themselves.
+The **Python source code is included with every release** so users can inspect the program themselves.
 
 For safety, only download releases from the official GitHub repository and avoid modified or unofficial copies.
 
 ---
 
-## 🚫 Project Usage
-
-**Please do not copy, re-upload, redistribute, or claim this project as your own.**
-
-The source code is provided for transparency and educational purposes.
-
-You may download and use the program, but please **do not create a copy of this project and publish it as your own project**.
-
-If you want to make significant changes or create a separate project based on this code, please contact the original author first.
-
----
-
-## 🛠️ Built With
+# 🛠️ Built With
 
 * 🐍 **Python**
 * 📥 **yt-dlp**
@@ -326,7 +371,19 @@ If you want to make significant changes or create a separate project based on th
 
 ---
 
-## ⚖️ Disclaimer
+# 🚫 Project Usage
+
+**Please do not copy, re-upload, redistribute, or claim this project as your own.**
+
+The source code is provided for transparency and educational purposes.
+
+You may download and use the program, but please **do not copy this project and publish it as your own project**.
+
+Please do not create modified or rebranded versions and distribute them as if they were the original 8K YT Downloader.
+
+---
+
+# ⚖️ Disclaimer
 
 This project is intended for personal and educational use.
 
@@ -336,8 +393,8 @@ Respect copyright and YouTube's Terms of Service.
 
 ---
 
-## ⭐ Support
+# ⭐ Support
 
-If you like **8K YT Downloader**, consider giving the repository a ⭐ on GitHub!
+If you like **8K YT Downloader**, consider giving the GitHub repository a ⭐!
 
 Enjoy! 🎬
