@@ -108,6 +108,7 @@ Then press **Enter**.
 
 That's it! 🎉
 
+(Sometimes You Can Just Right Click select open with the click python)
 ---
 
 ## ⚡ Quick & Easy
