@@ -371,18 +371,6 @@ For safety, only download releases from the official GitHub repository and avoid
 
 ---
 
-# 🚫 Project Usage
-
-**Please do not copy, re-upload, redistribute, or claim this project as your own.**
-
-The source code is provided for transparency and educational purposes.
-
-You may download and use the program, but please **do not copy this project and publish it as your own project**.
-
-Please do not create modified or rebranded versions and distribute them as if they were the original 8K YT Downloader.
-
----
-
 # ⚖️ Disclaimer
 
 This project is intended for personal and educational use.
