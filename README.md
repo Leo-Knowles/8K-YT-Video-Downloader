@@ -1,6 +1,6 @@
 # 🎬 8K YT Downloader
 
-A simple YouTube video and audio downloader built with Python and `yt-dlp`.
+A simple YouTube video and audio downloader for Windows.
 
 Download videos in up to **8K quality**, extract audio, choose different formats, and download playlists through a clean terminal interface.
 
@@ -24,33 +24,217 @@ Download videos in up to **8K quality**, extract audio, choose different formats
 
 ---
 
+## 📦 Release Files
+
+Each release contains two versions:
+
+### 🟢 `8K-YT-Downloader.exe`
+
+The **ready-to-use Windows version**.
+
+No Python installation is required. Simply download the EXE and run it.
+
+### 🐍 `8K_YT_Downloader.py`
+
+The **Python source code** for the downloader.
+
+The source code is included so users can inspect the program and see exactly how it works.
+
+---
+
+## 💻 Requirements
+
+### For the `.exe`
+
+You need:
+
+* 🪟 Windows
+* 🌐 An internet connection
+* ⚙️ FFmpeg
+
+**Python and yt-dlp are NOT required.**
+
+### For the `.py` source
+
+You need:
+
+* 🐍 Python
+* 🌐 An internet connection
+* ⚙️ FFmpeg
+* `yt-dlp`
+* `Rich`
+* `PyFiglet`
+* `Pyperclip`
+
+---
+
+## 📥 Using the EXE
+
+No installation is required.
+
+1. Download:
+
+```text
+8K-YT-Downloader.exe
+```
+
+2. Put it anywhere you like.
+
+3. Double-click the EXE.
+
+4. The downloader will open in a Command Prompt window.
+
+That's it! 🎉
+
+---
+
+## ⚙️ Installing FFmpeg
+
+FFmpeg is required by 8K YT Downloader for combining video and audio streams and converting media formats.
+
+### 1. Download FFmpeg
+
+Download a Windows build of FFmpeg from:
+
+**https://www.gyan.dev/ffmpeg/builds/**
+
+For most users, download the **ffmpeg-release-essentials** ZIP.
+
+### 2. Extract FFmpeg
+
+Extract the downloaded ZIP file.
+
+You can place the extracted folder somewhere simple, such as:
+
+```text
+C:\ffmpeg
+```
+
+Make sure the following files exist:
+
+```text
+C:\ffmpeg\bin\ffmpeg.exe
+C:\ffmpeg\bin\ffprobe.exe
+```
+
+### 3. Add FFmpeg to PATH
+
+Press:
+
+```text
+Windows Key + R
+```
+
+Type:
+
+```text
+sysdm.cpl
+```
+
+and press **Enter**.
+
+Then:
+
+1. Open the **Advanced** tab.
+2. Click **Environment Variables**.
+3. Under **System variables**, select **Path**.
+4. Click **Edit**.
+5. Click **New**.
+6. Add:
+
+```text
+C:\ffmpeg\bin
+```
+
+7. Click **OK** on all the windows.
+
+### 4. Check FFmpeg
+
+Close any existing Command Prompt windows and open a new one.
+
+Run:
+
+```text
+ffmpeg -version
+```
+
+If FFmpeg displays its version information, it is installed correctly. ✅
+
+You can now use **8K YT Downloader**.
+
+---
+
+## ⚡ Quick & Easy Download
+
+Choose:
+
+```text
+1) Quick & Easy Download
+```
+
+Paste a YouTube URL.
+
+The downloader will automatically download the **highest quality available**.
+
+You can also leave the URL empty if the YouTube link is already copied to your clipboard.
+
+---
+
+## 🛠️ Advanced Download
+
+Choose:
+
+```text
+2) Advanced Download
+```
+
+Advanced mode lets you choose exactly what you want to download.
+
+### Download Type
+
+```text
+1) Audio
+2) Video without audio
+3) Video + audio
+```
+
+---
+
 ## 🎥 Video Quality
 
-Choose from:
+Available quality options:
 
-* Best Quality Available
-* 8K
-* 4K
-* 1080p
-* 720p60
-* 480p
-* 360p
-* 240p
-* 144p
+```text
+1) Best Quality Available
+2) 8K
+3) 4K
+4) 1080p
+5) 720p60
+6) 480p
+7) 360p
+8) 240p
+9) 144p
+```
 
-> The maximum quality depends on what is available for the video.
+> The maximum quality depends on what is available for the YouTube video.
 
 ---
 
 ## 🎞️ Video Formats
 
-Supported formats:
+Supported video formats:
 
-* **MP4** — Default and most compatible
+* **MP4** — Default
 * **MKV**
 * **WebM**
 * **MOV**
 * **AVI**
+
+### Recommended
+
+**MP4** is the best choice for general compatibility.
+
+**MKV** can be useful when working with different video/audio streams.
 
 ---
 
@@ -66,84 +250,9 @@ Supported audio formats:
 
 ---
 
-## 📥 Installation
-
-### 1. Download the file
-
-Download **`8K-YT-Downloader.py`** from this GitHub repository.
-
-### 2. Open the downloaded file's folder
-
-For example, if you downloaded it to your **Downloads** folder, open:
-
-```text
-Your Downloads Folder
-```
-
-### 3. Open Command Prompt in that folder
-
-Click the address bar at the top of File Explorer where it says:
-
-```text
-Downloads
-```
-
-Type:
-
-```text
-cmd
-```
-
-Then press **Enter**.
-
-### 4. Start the downloader
-
-In the Command Prompt window, type:
-
-```text
-py 8K-YT-Downloader.py
-```
-
-Then press **Enter**.
-
-That's it! 🎉
-
-(Sometimes You Can Just Right Click on the file then select open with then click python)
----
-
-## ⚡ Quick & Easy
-
-Choose:
-
-```text
-1) Quick & Easy Download
-```
-
-Paste your YouTube URL and the downloader will automatically use the highest quality available.
-
-You can also leave the URL empty if the YouTube link is already copied to your clipboard.
-
----
-
-## 🛠️ Advanced Download
-
-Advanced mode gives you more control.
-
-### Download Type
-
-```text
-1) Audio
-2) Video without audio
-3) Video + audio
-```
-
-You can then select your preferred quality and format.
-
----
-
 ## 📊 Download Progress
 
-The downloader displays a live progress bar while downloading:
+The downloader displays live progress while downloading:
 
 ```text
 ╭────────────────────────────────────────────╮
@@ -155,13 +264,23 @@ The downloader displays a live progress bar while downloading:
 ╰────────────────────────────────────────────╯
 ```
 
-For playlists, the current video number is also shown.
+For playlists, the current video position is also displayed.
+
+---
+
+## 📚 Playlists
+
+You can download YouTube playlists.
+
+The downloader processes the videos individually and shows the progress of the current video.
 
 ---
 
 ## 📁 Download Location
 
-Downloads are automatically saved to your Windows **Downloads** folder:
+Downloads are automatically saved to your Windows **Downloads** folder.
+
+For example:
 
 ```text
 C:\Users\YourName\Downloads
@@ -169,52 +288,41 @@ C:\Users\YourName\Downloads
 
 ---
 
-## 🔧 Requirements
+## 🔒 Is It a Virus?
 
-You need:
+**8K YT Downloader is not intended to contain malware, viruses, spyware, or other malicious software.**
 
-* Windows
-* Python
-* FFmpeg
-* An internet connection
+The `.exe` is created from the included Python source code using **PyInstaller**.
 
-The downloader uses:
+Because the EXE is a newly built and unsigned Windows executable, some antivirus software or Windows Defender may occasionally display a warning. This can happen with PyInstaller applications, particularly when they are new or have few downloads.
 
-* `yt-dlp`
-* `FFmpeg`
-* `Rich`
-* `PyFiglet`
-* `Pyperclip`
+The **Python source code is included with every release** so users can inspect the code themselves.
+
+For safety, only download releases from the official GitHub repository and avoid modified or unofficial copies.
 
 ---
 
-## ⚠️ Troubleshooting
+## 🚫 Project Usage
 
-### `py` is not recognised
+**Please do not copy, re-upload, redistribute, or claim this project as your own.**
 
-Make sure Python is installed and added to your PATH.
+The source code is provided for transparency and educational purposes.
 
-You can test it with:
+You may download and use the program, but please **do not create a copy of this project and publish it as your own project**.
 
-```text
-py --version
-```
+If you want to make significant changes or create a separate project based on this code, please contact the original author first.
 
-### yt-dlp errors
+---
 
-Try updating yt-dlp:
+## 🛠️ Built With
 
-```text
-py -m pip install -U yt-dlp
-```
-
-### FFmpeg errors
-
-Make sure FFmpeg is installed and available from Command Prompt:
-
-```text
-ffmpeg -version
-```
+* 🐍 **Python**
+* 📥 **yt-dlp**
+* 🎨 **Rich**
+* 🔤 **PyFiglet**
+* 📋 **Pyperclip**
+* ⚙️ **FFmpeg**
+* 📦 **PyInstaller**
 
 ---
 
@@ -222,7 +330,9 @@ ffmpeg -version
 
 This project is intended for personal and educational use.
 
-Only download content that you have the right or permission to download. Respect copyright and YouTube's Terms of Service.
+Only download content that you have the right or permission to download.
+
+Respect copyright and YouTube's Terms of Service.
 
 ---
 
