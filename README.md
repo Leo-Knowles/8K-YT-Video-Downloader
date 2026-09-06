@@ -108,7 +108,7 @@ Then press **Enter**.
 
 That's it! 🎉
 
-(Sometimes You Can Just Right Click select open with then click python)
+(Sometimes You Can Just Right Click on the file then select open with then click python)
 ---
 
 ## ⚡ Quick & Easy
