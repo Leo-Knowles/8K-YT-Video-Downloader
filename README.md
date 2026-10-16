@@ -94,11 +94,9 @@ For most users, download the **ffmpeg-release-essentials** ZIP.
 
 Extract the downloaded ZIP.
 
-A simple location is:
+Type This In The Bar At The Top Of The Screen (Not Search Bar): C:\
 
-```text
-C:\ffmpeg
-```
+Now Click The + Button At The Top Of The Screen And Drag FFMPEG To The Tab With The C Drive And Rename The Folder To "ffmpeg"
 
 Make sure these files exist:
 
