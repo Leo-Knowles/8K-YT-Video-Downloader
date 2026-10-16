@@ -56,7 +56,7 @@ The easiest way to use 8K YT Downloader on Windows is the `.exe`.
 * 🌐 Internet connection
 * ⚙️ FFmpeg
 
-**Python and yt-dlp are NOT required for the EXE.**
+##Python and yt-dlp are NOT required for the EXE.
 
 ### Installation
 
