@@ -150,7 +150,7 @@ If FFmpeg displays its version information, it is installed correctly. ✅
 
 # 🍎 macOS
 
-## ⚠️ This App Has Not Been Tested On Macos But It Should Work
+## ⚠️ This App Has Not Been Tested On Macos But It Should Work ⚠️
 
 The Windows `.exe` **will not work on macOS**.
 
